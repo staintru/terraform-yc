@@ -134,6 +134,8 @@ terraform --version
 
 ![image](https://github.com/staintru/terraform-yc/blob/main/16.png)
 
+![image](https://github.com/staintru/terraform-yc/blob/main/20.png)
+
 
 ### Задание 6
 
