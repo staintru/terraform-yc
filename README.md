@@ -94,6 +94,19 @@ terraform --version
 2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ в файле main.tf: **"netology-develop-platform-db"** ,  ```cores  = 2, memory = 2, core_fraction = 20```. Объявите её переменные с префиксом **vm_db_** в том же файле ('vms_platform.tf').  ВМ должна работать в зоне "ru-central1-b"
 3. Примените изменения.
 
+### Решение
+
+![image](https://github.com/staintru/terraform-yc/blob/main/12.png)
+
+Увы, но выполнить такое условие не возможно.  Я столкнулся я проблемами: 
+
+![image](https://github.com/staintru/terraform-yc/blob/main/10.png)
+
+![image](https://github.com/staintru/terraform-yc/blob/main/11.png)
+
+В итоге пришлось разместить в зоне **ru-central1-d** и поменять конфигурацию на **standard-v2**
+
+![image](https://github.com/staintru/terraform-yc/blob/main/09.png)
 
 ### Задание 4
 
@@ -102,12 +115,24 @@ terraform --version
 
 В качестве решения приложите вывод значений ip-адресов команды ```terraform output```.
 
+### Решение
+
+![image](https://github.com/staintru/terraform-yc/blob/main/13.png)
+
+![image](https://github.com/staintru/terraform-yc/blob/main/14.png)
 
 ### Задание 5
 
 1. В файле locals.tf опишите в **одном** local-блоке имя каждой ВМ, используйте интерполяцию ${..} с НЕСКОЛЬКИМИ переменными по примеру из лекции.
 2. Замените переменные внутри ресурса ВМ на созданные вами local-переменные.
 3. Примените изменения.
+
+
+### Решение
+
+![image](https://github.com/staintru/terraform-yc/blob/main/15.png)
+
+![image](https://github.com/staintru/terraform-yc/blob/main/16.png)
 
 
 ### Задание 6
@@ -145,6 +170,20 @@ terraform --version
   
 5. Найдите и закоментируйте все, более не используемые переменные проекта.
 6. Проверьте terraform plan. Изменений быть не должно.
+
+
+### Решение
+
+![image](https://github.com/staintru/terraform-yc/blob/main/17.png)
+
+![image](https://github.com/staintru/terraform-yc/blob/main/18.png)
+
+### [vms_platform.tf](src/vms_platform.tf)
+
+### [main.tf](src/main.tf)
+
+![image](https://github.com/staintru/terraform-yc/blob/main/19.png)
+
 
 ------
 
@@ -195,6 +234,8 @@ test = [
 ]
 ```
 2. Напишите выражение в terraform console, которое позволит вычленить строку "ssh -o 'StrictHostKeyChecking=no' ubuntu@62.84.124.117" из этой переменной.
+
+
 ------
 
 ------
