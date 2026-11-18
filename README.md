@@ -184,6 +184,12 @@ terraform --version
 
 ### [main.tf](src/main.tf)
 
+### [locals.tf](src/locals.tf)
+
+### [outputs.tf](src/outputs.tf)
+
+### [providers.tf](src/providers.tf)
+
 ![image](https://github.com/staintru/terraform-yc/blob/main/19.png)
 
 
